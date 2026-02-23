@@ -1,0 +1,6 @@
+services:
+  cvportfolio:
+    image: ${DOCKER_REGISTRY-}cvportfolio
+    build:
+      context: .
+      dockerfile: CVPortfolio/Dockerfile
