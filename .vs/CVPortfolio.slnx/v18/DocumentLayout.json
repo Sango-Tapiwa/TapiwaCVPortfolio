@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lab_services_student\\Desktop\\TapiwaCVPortfolio\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9ACB6465-6378-3416-C1AF-1684D0FDD07B}|CVPortfolio\\CVPortfolio.csproj|c:\\users\\lab_services_student\\desktop\\tapiwacvportfolio\\cvportfolio\\cvportfolio.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9ACB6465-6378-3416-C1AF-1684D0FDD07B}|CVPortfolio\\CVPortfolio.csproj|solutionrelative:cvportfolio\\cvportfolio.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|c:\\users\\lab_services_student\\desktop\\tapiwacvportfolio\\docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CVPortfolio",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\TapiwaCVPortfolio\\CVPortfolio\\CVPortfolio.csproj",
+              "RelativeDocumentMoniker": "CVPortfolio\\CVPortfolio.csproj",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\TapiwaCVPortfolio\\CVPortfolio\\CVPortfolio.csproj",
+              "RelativeToolTip": "CVPortfolio\\CVPortfolio.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-23T17:32:18.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "docker-compose",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\TapiwaCVPortfolio\\docker-compose.dcproj",
+              "RelativeDocumentMoniker": "docker-compose.dcproj",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\TapiwaCVPortfolio\\docker-compose.dcproj",
+              "RelativeToolTip": "docker-compose.dcproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-23T17:32:12.744Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
