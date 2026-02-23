@@ -1,0 +1,70 @@
+﻿@model CVPortfolio.Models.Profile
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4 fw-bold">Admin Dashboard</h2>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-user fa-lg me-2"></i> Profile
+                    </h5>
+                    <p class="card-text">Manage your profile information and photo.</p>
+                    <a asp-action="EditProfile" asp-route-id="@Model.Id" class="btn btn-primary">Edit Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-briefcase fa-lg me-2"></i> Experience
+                    </h5>
+                    <p class="card-text">Add, edit, or remove your work experience.</p>
+                    <a asp-action="ManageExperiences" class="btn btn-primary">Manage Experiences</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-graduation-cap fa-lg me-2"></i> Education
+                    </h5>
+                    <p class="card-text">Add, edit, or remove your education history.</p>
+                    <a asp-action="ManageEducations" class="btn btn-primary">Manage Educations</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-code fa-lg me-2"></i> Skills
+                    </h5>
+                    <p class="card-text">Add, edit, or remove your technical skills.</p>
+                    <a asp-action="ManageSkills" class="btn btn-primary">Manage Skills</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-project-diagram fa-lg me-2"></i> Projects
+                    </h5>
+                    <p class="card-text">Add, edit, or remove your portfolio projects.</p>
+                    <a asp-action="ManageProjects" class="btn btn-primary">Manage Projects</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

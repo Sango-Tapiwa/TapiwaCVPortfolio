@@ -1,0 +1,67 @@
+﻿@model IEnumerable<CVPortfolio.Models.Education>
+@{
+    ViewData["Title"] = "Manage Educations";
+}
+
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h2 class="fw-bold">Manage Educations</h2>
+        </div>
+        <div class="col-md-4 text-end">
+            <a asp-action="CreateEducation" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Add Education
+            </a>
+        </div>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info" role="alert">
+            <i class="fas fa-info-circle"></i> No educations yet. <a asp-action="CreateEducation">Add one now</a>.
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Degree</th>
+                        <th>Institution</th>
+                        <th>Location</th>
+                        <th>Years</th>
+                        <th>Order</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="fw-bold">@item.Degree</td>
+                            <td>@item.Institution</td>
+                            <td>@(string.IsNullOrEmpty(item.Location) ? "-" : item.Location)</td>
+                            <td>@item.StartYear - @(item.EndYear?.ToString() ?? "Present")</td>
+                            <td><span class="badge bg-secondary">@item.DisplayOrder</span></td>
+                            <td>
+                                <a asp-action="EditEducation" asp-route-id="@item.Id" class="btn btn-sm btn-warning">
+                                    <i class="fas fa-edit"></i> Edit
+                                </a>
+                                <a asp-action="DeleteEducation" asp-route-id="@item.Id" class="btn btn-sm btn-danger">
+                                    <i class="fas fa-trash"></i> Delete
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+
+    <div class="mt-4">
+        <a asp-action="Index" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to Dashboard
+        </a>
+    </div>
+</div>

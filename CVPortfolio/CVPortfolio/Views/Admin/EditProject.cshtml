@@ -1,0 +1,76 @@
+﻿@model Project
+@{
+    ViewData["Title"] = "Edit Project";
+}
+
+<div class="container py-5">
+    <h1 class="mb-4">Edit Project</h1>
+
+    <div class="row">
+        <div class="col-md-8">
+            <form asp-action="EditProject" method="post">
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" asp-for="CreatedDate" />
+
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label"></label>
+                    <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="TechStack" class="form-label"></label>
+                    <input asp-for="TechStack" class="form-control" />
+                    <span asp-validation-for="TechStack" class="text-danger"></span>
+                    <small class="form-text text-muted">Separate technologies with commas</small>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="GitHubUrl" class="form-label"></label>
+                    <input asp-for="GitHubUrl" class="form-control" type="url" />
+                    <span asp-validation-for="GitHubUrl" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="LiveDemoUrl" class="form-label"></label>
+                    <input asp-for="LiveDemoUrl" class="form-control" type="url" />
+                    <span asp-validation-for="LiveDemoUrl" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="ImageUrl" class="form-label"></label>
+                    <input asp-for="ImageUrl" class="form-control" type="url" />
+                    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                    <small class="form-text text-muted">Enter a URL to a project screenshot</small>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="DisplayOrder" class="form-label"></label>
+                    <input asp-for="DisplayOrder" class="form-control" type="number" />
+                    <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i> Save Changes
+                    </button>
+                    <a asp-action="ManageProjects" class="btn btn-secondary">
+                        <i class="fas fa-times"></i> Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

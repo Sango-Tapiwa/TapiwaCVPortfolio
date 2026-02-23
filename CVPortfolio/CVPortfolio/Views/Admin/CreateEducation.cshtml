@@ -1,0 +1,80 @@
+﻿@model CVPortfolio.Models.Education
+@{
+    ViewData["Title"] = "Create Education";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8">
+            <h2 class="fw-bold mb-4">Add New Education</h2>
+
+            <form asp-action="CreateEducation" method="post">
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+                <div class="mb-3">
+                    <label asp-for="Degree" class="form-label fw-bold"></label>
+                    <input asp-for="Degree" class="form-control" placeholder="e.g., Bachelor of Science in Computer Science" />
+                    <span asp-validation-for="Degree" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Institution" class="form-label fw-bold"></label>
+                    <input asp-for="Institution" class="form-control" placeholder="e.g., University of Technology" />
+                    <span asp-validation-for="Institution" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Location" class="form-label fw-bold"></label>
+                    <input asp-for="Location" class="form-control" placeholder="e.g., New York, NY" />
+                    <span asp-validation-for="Location" class="text-danger small"></span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label asp-for="StartYear" class="form-label fw-bold"></label>
+                            <input asp-for="StartYear" class="form-control" type="number" placeholder="2020" min="1900" max="2099" />
+                            <span asp-validation-for="StartYear" class="text-danger small"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label asp-for="EndYear" class="form-label fw-bold"></label>
+                            <input asp-for="EndYear" class="form-control" type="number" placeholder="2024" min="1900" max="2099" />
+                            <span asp-validation-for="EndYear" class="text-danger small"></span>
+                            <small class="text-muted d-block mt-1">Leave empty if still attending</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label fw-bold"></label>
+                    <textarea asp-for="Description" class="form-control" rows="4" placeholder="Additional details about your education..."></textarea>
+                    <span asp-validation-for="Description" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="DisplayOrder" class="form-label fw-bold"></label>
+                    <input asp-for="DisplayOrder" class="form-control" type="number" placeholder="1" min="0" />
+                    <span asp-validation-for="DisplayOrder" class="text-danger small"></span>
+                    <small class="text-muted d-block mt-1">Lower numbers appear first</small>
+                </div>
+
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i> Create Education
+                    </button>
+                    <a asp-action="ManageEducations" class="btn btn-secondary">
+                        <i class="fas fa-times"></i> Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
